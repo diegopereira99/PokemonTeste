@@ -41,7 +41,6 @@ class PokemonRepository extends IPokemonRepositoryInterface{
         "abilities": response.data["abilities"],
       }
     );
-    print(pokemonDetail);
     return pokemonDetail;
 
   }

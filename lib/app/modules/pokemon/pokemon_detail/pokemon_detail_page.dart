@@ -25,7 +25,6 @@ class _PokemonDetailPageState
 
   @override
   void initState() {
-    print(widget.pokemon.url);
     controller.getPokemonDetails(widget.pokemon.url);
     super.initState();
   }
@@ -67,13 +66,15 @@ class _PokemonDetailPageState
                 );
               break;
               case FutureStatus.fulfilled:
-                print(controller.pokemonDetailFuture.value);
                 PokemonDetailsModel pokemon = controller.pokemonDetailFuture.value;
                 return
                   ListView(
                     children: [
                       Container(
                         color: Colors.grey[200],
+                        constraints: BoxConstraints(
+                          minHeight: 200
+                        ),
                         height: size.height * 0.35,
                         width: double.infinity,
                         child: Stack(

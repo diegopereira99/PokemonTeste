@@ -24,11 +24,11 @@ class CustomAppBar extends PreferredSize {
         ),
         actions: [
           Container(
-            height: 40,
-            width: 40,
+            height: 30,
+            width: 30,
             margin: EdgeInsets.only(right: 10),
-            child: Image.network(
-              "https://www.pngfind.com/pngs/m/183-1832287_pokeball-png-free-download-pokeball-plus-png-transparent.png",
+            child: Image.asset(
+              "assets/images/pokemon_ball.png",
             ),
           )
         ],
